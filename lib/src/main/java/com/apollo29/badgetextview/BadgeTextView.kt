@@ -1,4 +1,4 @@
-package com.smarttoolfactory.badgetextview
+package com.apollo29.badgetextview
 
 import android.content.Context
 import android.graphics.Canvas

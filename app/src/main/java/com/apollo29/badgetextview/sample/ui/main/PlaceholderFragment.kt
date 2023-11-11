@@ -1,4 +1,4 @@
-package com.smarttoolfactory.badgetextview.ui.main
+package com.apollo29.badgetextview.sample.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,14 @@ import android.view.ViewGroup
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.smarttoolfactory.badgetextview.BadgeTextView
-import com.smarttoolfactory.badgetextview.databinding.FragmentMainBinding
-import kotlinx.coroutines.*
+import androidx.lifecycle.lifecycleScope
+import com.apollo29.badgetextview.BadgeTextView
+import com.apollo29.badgetextview.sample.databinding.FragmentMainBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * A placeholder fragment containing a simple view.
@@ -54,7 +59,7 @@ class PlaceholderFragment : Fragment() {
 
             jobTimer?.cancel()
 
-            jobTimer = GlobalScope.launch {
+            jobTimer = viewLifecycleOwner.lifecycleScope.launch {
 
                 repeat(100) { time ->
                     withContext(Dispatchers.Main) {

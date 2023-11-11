@@ -1,13 +1,14 @@
-package com.smarttoolfactory.badgetextview
+package com.apollo29.badgetextview.sample
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.apollo29.badgetextview.BadgeTextView
+import com.apollo29.badgetextview.sample.databinding.ActivityMainBinding
+import com.apollo29.badgetextview.sample.ui.main.SectionsPagerAdapter
 import com.google.android.material.tabs.TabLayout
-import com.smarttoolfactory.badgetextview.databinding.ActivityMainBinding
-import com.smarttoolfactory.badgetextview.ui.main.SectionsPagerAdapter
 
 class MainActivity : AppCompatActivity() {
 
